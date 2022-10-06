@@ -2,23 +2,29 @@ import styles from '../styles/Home.module.css';
 import { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { login, logout } from '../reducers/user';
-import { removeAllBookmark } from '../reducers/bookmarks';
-import { removeAllHiddenArticles } from '../reducers/hiddenArticles';
-import styles from '../styles/Header.module.css';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faUser, faXmark, faEye } from '@fortawesome/free-solid-svg-icons';
 import Moment from 'react-moment';
 import { Modal } from 'antd';
 import Link from 'next/link';
 
 function Home() {
+  const dispatch = useDispatch();
+  const [isModalVisible, setIsModalVisible] = useState(false);
+
   return (
     <div>
-      <main className={styles.main}>
-        <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Bonjour.js!</a>
-        </h1>
-      </main>
+    <div className = {styles.body}>
+      <div className = {styles.leftContainer} ></div>
+      <div className = {styles.rightContainer}>
+        <img></img>
+        <h1>See what's happening</h1>
+        <div class = "buttons">
+          <h2>Join Hackatweet today.</h2>
+          <button id="signUp"></button>
+          <h3>Already have an account?</h3>
+          <button id="signIn"></button>
+        </div>
+      </div>
+    </div>
     </div>
   );
 }
