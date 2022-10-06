@@ -36,8 +36,8 @@ let modalSignUpContent = (
 			<div className={styles.registerContainer}>
 				<div className={styles.registerSection}>
         <p>Create your Hackatweet account</p>
-					<input type="text" placeholder="Firstname" id="signUpFirstname" onChange={(e) => setsignUpFirstname(e.target.value)} value={signUpFirstname} />
-          <input type="text" placeholder="Username" id="signUpUsername" onChange={(e) => setSignUpUsername(e.target.value)} value={signUpUsername} />
+					<input className = {styles.input} type="text" placeholder="Firstname" id="signUpFirstname" onChange={(e) => setsignUpFirstname(e.target.value)} value={signUpFirstname} />
+          <input className = {styles.input} type="text" placeholder="Username" id="signUpUsername" onChange={(e) => setSignUpUsername(e.target.value)} value={signUpUsername} />
 					<input type="password" placeholder="Password" id="signUpPassword" onChange={(e) => setSignUpPassword(e.target.value)} value={signUpPassword} />
 					<button id="register" onClick={() => handleRegister()}>Register</button>
 				</div>
@@ -48,7 +48,7 @@ let modalSignUpContent = (
 	// 	fetch('http://localhost:3000/users/signup', {
 	// 		method: 'POST',
 	// 		headers: { 'Content-Type': 'application/json' },
-	// 		body: JSON.stringify({ username: signUpUsername, password: signUpPassword }),
+	// 		body: JSON.stringify({ username: signUpUsername, password: signUpPassword, firstname: signUpFirstname}),
 	// 	}).then(response => response.json())
 	// 		.then(data => {
 	// 			if (data.result) {
@@ -64,12 +64,13 @@ let modalSignUpContent = (
 
   let modalSignInContent = (
     <div className={styles.registerContainer}>
-      
+      <div class="croix"></div>
+      <img class = "logo"></img>
       <div className={styles.registerSection}>
         <p>Sign-in to your Hackatweet account</p>
-        <input type="text" placeholder="Username" id="signInUsername" onChange={(e) => setSignInUsername(e.target.value)} value={signInUsername} />
-        <input type="password" placeholder="Password" id="signInPassword" onChange={(e) => setSignInPassword(e.target.value)} value={signInPassword} />
-        <button id="connection" onClick={() => handleConnection()}>Connect</button>
+        <input className = {styles.input} type="text" placeholder="Username" id="signInUsername" onChange={(e) => setSignInUsername(e.target.value)} value={signInUsername} />
+        <input className = {styles.input} type="password" placeholder="Password" id="signInPassword" onChange={(e) => setSignInPassword(e.target.value)} value={signInPassword} />
+        <div className = {styles.inputButton} id="connection" onClick={() => handleConnection()}><SignUp/></div>
       </div>
     </div>
   );
@@ -107,15 +108,20 @@ let modalSignUpContent = (
           <div onClick={() => showSignInModal()} class = "signIn composant"><SignIn/></div>
         </div>
       </div>
-    </div>
+      <div className = {styles.modals}>
     {isSignInModalVisible && <div id="react-modals">
 				<Modal getContainer="#react-modals" className={styles.modal} visible={isSignInModalVisible} closable={false} footer={null}>
 					{modalSignInContent}
 				</Modal>
 			</div>}
-    <Modal getContainer="#react-modals" className={styles.modal} visible={isSignUpModalVisible} closable={false} footer={null}>
-					{modalSignUpContent}
-		</Modal>
+      {isSignUpModalVisible && <div id="react-modals">
+				<Modal getContainer="#react-modals" className={styles.modal} visible={isSignUpModalVisible} closable={false} footer={null}>
+					{modalSignInContent}
+				</Modal>
+			</div>}
+    </div>
+    </div>
+    
     </div>
   );
 }
