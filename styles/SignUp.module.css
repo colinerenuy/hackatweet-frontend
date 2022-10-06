@@ -1,0 +1,10 @@
+.button {
+    border-radius: 18px;
+    background-color: #1DA1F2;
+    color: white;
+    width: 190px;   
+    height: 35px;
+    border: none;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+}

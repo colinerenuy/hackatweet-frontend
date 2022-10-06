@@ -1,3 +1,8 @@
+@font-face {
+  font-family: 'MontHeavy';
+  src:  url('../public/Mont-Heavy.ttf') format('ttf'),
+}
+
 .leftContainer{
   width: 40vw;
   height: 100vh;
@@ -6,17 +11,31 @@
   background-size: 1300px;
 }
 
+.rightContainer {
+  margin-left: 15px;
+}
+
 .body {
   display: flex;
   background-Color: #152238;
   color: white;
 }
 
-.rightContainer {
+.h1 {
+  font-weight: 700;
+  letter-spacing: -1px;
+  font-size: 50px;
+}
 
+.h2 {
+  font-family: 'Verdana';
+  font-size: 25px;
+}
+
+.h3 {
+  font-size: 15px;
 }
 
 .buttonSignUp{
-  background-color: blue;
-  
+  background-color: #1DA1F2;
 }
