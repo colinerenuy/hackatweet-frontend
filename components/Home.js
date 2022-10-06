@@ -7,6 +7,7 @@ import SignIn from './SignIn';
 import SignUp from './SignUp';
 import { Modal } from 'antd';
 import Link from 'next/link';
+import LeftContainer from "./Leftcontainer";
 
 function Home() {
   const dispatch = useDispatch();
@@ -97,7 +98,16 @@ let modalSignUpContent = (
   return (
     <div>
     <div className = {styles.body}>
-      <div className = {styles.leftContainer} ></div>
+      <div className = {styles.leftContainer} >
+
+
+<LeftContainer></LeftContainer>
+
+
+
+
+
+      </div>
       <div className = {styles.rightContainer}>
         <img src="public/favicon.ico"></img>
         <h1 className = {styles.h1}>See what's happening</h1>
@@ -128,3 +138,4 @@ let modalSignUpContent = (
 
 
 export default Home;
+

@@ -1,0 +1,16 @@
+#Homepage {
+    background-image: url("../public/twitter-icon-black.png");
+}
+
+#LogoUser {
+    background-image: url("../public/twitter-avatar.jpg");
+    border-radius: 50%;
+}
+
+#Logout {
+    border-radius: 50%;
+}
+
+.leftContainer {
+background-color: #0a141c;
+}
