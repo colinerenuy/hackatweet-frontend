@@ -1,0 +1,46 @@
+.tweetBody {
+    background-color: black;
+    border-right: 1px solide grey;
+    border-left: 1px solide grey;
+    border-top: 1px solide grey;
+    color: white;
+    height: 180px;
+    padding: 20px;
+}
+
+.img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+
+.userInfos{
+    display: flex;
+}
+.textInfos {
+    display: flex;
+    margin: 5px;
+}
+
+.firstname {
+    font-weight: 800;
+}
+
+.username {
+    color: grey;
+    font-weight: 200;
+}
+
+.icons {
+    margin-top: 20px;
+    display: flex;
+}
+
+.icon {
+    padding-right: 10px;
+}
+
+.tweet {
+    height: 20px;
+}

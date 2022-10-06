@@ -1,10 +1,12 @@
 import styles from '../styles/HomeTweets.module.css';
+import Tweet from './Tweet';
+
 
 function HomeTweets() {
 
     return(
         <div>
-            <button className = {styles.button}>Sign In</button>
+            <Tweet></Tweet>
         </div>
     )
 }
