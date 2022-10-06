@@ -1,16 +1,41 @@
-#Homepage {
-    background-image: url("../public/twitter-icon-black.png");
+.Logotwitter {
+  margin-top: 20px;
+  margin-left: 30px;
+  width: 50px;
+  height: 50px;
 }
 
-#LogoUser {
-    background-image: url("../public/twitter-avatar.jpg");
-    border-radius: 50%;
+.LogoUser {
+  background-image: url("../public/twitter-avatar.jpg");
+  border-radius: 50%;
 }
 
-#Logout {
-    border-radius: 50%;
+.Logout {
+    display: flex;
+    justify-content: space-between;
+  background-color: #0a141c;
+  color: white;
+  width: 70px;
+  border-radius: 20px;
+  border: 1.5px solid white;
+  margin-left: 30px;
 }
 
 .leftContainer {
-background-color: #0a141c;
+  display: flex;
+  flex-direction: column;
+  background-color: #0a141c;
+  height: 100vh;
+  justify-content: space-between;
+}
+
+.Testname {
+    font-weight: bolder;
+  margin-left: 30px;
+
+}
+
+.Testusername {
+    margin-left: 30px;
+
 }
