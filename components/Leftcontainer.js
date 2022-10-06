@@ -11,17 +11,22 @@ function LeftContainer() {
   //const [isModalVisible, setIsModalVisible] = useState(false);
 
   return (
-    <div>
+    
       <div className={styles.leftContainer}>
         <img className={styles.Logotwitter} src="/twitter-icon-black.png"></img>
         <div className={styles.bottomContainer}>
-          <div className={styles.LogoUser}></div>
-          <div className={styles.Testname}>Testname</div>
-          <div className={styles.Testusername}>@Testusername</div>
+          <div className={styles.container}>
+            <img className={styles.LogoUser} src="/twitter-avatar.jpg"></img>
+            <div className={styles.Names}>
+              <span className={styles.Testname}>Testname</span>
+              <span className={styles.Testusername}>@Testusername</span>
+            </div>
+          </div>
           <button className={styles.Logout}>Logout</button>
         </div>
-      </div>
-    </div>
+        </div>
+      
+  
   );
 }
 

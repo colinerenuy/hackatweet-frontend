@@ -6,36 +6,63 @@
 }
 
 .LogoUser {
-  background-image: url("../public/twitter-avatar.jpg");
+    display: flex;
+    flex-direction: row;
   border-radius: 50%;
+  height: 50px;
+  width: 50px;
+  margin-top: 60px;
+  justify-content: flex-start;
 }
 
 .Logout {
-    display: flex;
-    justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
   background-color: #0a141c;
   color: white;
   width: 70px;
   border-radius: 20px;
   border: 1.5px solid white;
-  margin-left: 30px;
+  margin-left: 60px;
+  margin-bottom: 40px;
+  font-size: smaller;
 }
 
 .leftContainer {
   display: flex;
   flex-direction: column;
-  background-color: #0a141c;
   height: 100vh;
+  width:30vw;
   justify-content: space-between;
+  background-color: red;
 }
 
 .Testname {
-    font-weight: bolder;
-  margin-left: 30px;
-
+  color: white;
+  font-size: 20px;
+  font-weight: bolder;
+  margin-left: 100px;
 }
 
 .Testusername {
-    margin-left: 30px;
+  color: rgb(86, 82, 82);
+  font-size: 15px;
+  margin-left: 100px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
 
+.container {
+    display: flex;
+    flex-direction: column;
+}
+
+.Names {
+    display: flex;
+    flex-direction: column;
+}
+
+.bottomContainer {
+    display: flex;
+   flex-direction: column;
 }

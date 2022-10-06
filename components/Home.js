@@ -108,7 +108,7 @@ let modalSignUpContent = (
       <div className = {styles.leftContainer} >
 
 
-<LeftContainer></LeftContainer>
+
 
 
 
