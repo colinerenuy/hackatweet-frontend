@@ -39,6 +39,7 @@ let modalSignUpContent = (
       <div className= {styles.closeIcon}>
       <FontAwesomeIcon onClick={showSignUpModal} className={styles.userSection} icon={faXmark} />
       </div>
+      <div><img className = {styles.logoTwitterInput} src="/twitter-icon-black.png"></img></div>
 				<div className={styles.registerSection}>
         <p className = {styles.sectionTitle}>Create your Hackatweet account</p>
 					<input className = {styles.input} type="text" placeholder="Firstname" id="signUpFirstname" onChange={(e) => setsignUpFirstname(e.target.value)} value={signUpFirstname} />
@@ -72,7 +73,7 @@ let modalSignUpContent = (
       <div className= {styles.closeIcon}>
       <FontAwesomeIcon onClick={showSignInModal} className={styles.userSection} icon={faXmark} />
       </div>
-      <img class = "logo"></img>
+      <img className = {styles.logoTwitterInput} src="/twitter-icon-black.png"></img>
       <div className={styles.registerSection}>
         <p className = {styles.sectionTitle}>Sign-in to your Hackatweet account</p>
         <input className = {styles.input} type="text" placeholder="Username" id="signInUsername" onChange={(e) => setSignInUsername(e.target.value)} value={signInUsername} />
@@ -115,7 +116,7 @@ let modalSignUpContent = (
 
       </div>
       <div className = {styles.rightContainer}>
-        <img src="public/favicon.ico"></img>
+        <img className = {styles.logoTwitter} src="/twitter-icon-black.png"></img>
         <h1 className = {styles.h1}>See what's happening</h1>
         <div class = "buttons">
           <h2 className = {styles.h2}>Join Hackatweet today.</h2>
