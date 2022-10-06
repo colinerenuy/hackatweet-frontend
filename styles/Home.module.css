@@ -40,13 +40,21 @@
   background-color: #1DA1F2;
 }
 
+/* MODALE */
 .registerSection{
   display: flex;
+  height: 100%;
   flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.registerContainer {
   height: 400px;
   padding: 20px;
-  justify-content: space-between;
-  align-items: center;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
 }
 
 .input {
@@ -59,10 +67,20 @@
   border-radius: 5px;
 }
 
-.inputButton {
-  
+.closeIcon {
+  display: flex;
+  justify-content: right;
+  margin-right: 20px;
 }
 
+.register {
+  background-color: transparent;
+  border: none;
+}
+
+.sectionTitle {
+  font-weight: 900;  
+}
 .modals {
   position: absolute;
   position: absolute;

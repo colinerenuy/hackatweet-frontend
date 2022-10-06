@@ -8,6 +8,8 @@ import SignUp from './SignUp';
 import { Modal } from 'antd';
 import Link from 'next/link';
 import LeftContainer from "./Leftcontainer";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faXmark} from '@fortawesome/free-solid-svg-icons';
 
 function Home() {
   const dispatch = useDispatch();
@@ -21,7 +23,6 @@ function Home() {
 
   const showSignInModal = () => {
     console.log("click SignIn");
-
 		setSignInIsModalVisible(!isSignInModalVisible);
 	};
 
@@ -35,12 +36,15 @@ function Home() {
 //Contenu//
 let modalSignUpContent = (
 			<div className={styles.registerContainer}>
+      <div className= {styles.closeIcon}>
+      <FontAwesomeIcon onClick={showSignUpModal} className={styles.userSection} icon={faXmark} />
+      </div>
 				<div className={styles.registerSection}>
-        <p>Create your Hackatweet account</p>
+        <p className = {styles.sectionTitle}>Create your Hackatweet account</p>
 					<input className = {styles.input} type="text" placeholder="Firstname" id="signUpFirstname" onChange={(e) => setsignUpFirstname(e.target.value)} value={signUpFirstname} />
           <input className = {styles.input} type="text" placeholder="Username" id="signUpUsername" onChange={(e) => setSignUpUsername(e.target.value)} value={signUpUsername} />
-					<input type="password" placeholder="Password" id="signUpPassword" onChange={(e) => setSignUpPassword(e.target.value)} value={signUpPassword} />
-					<button id="register" onClick={() => handleRegister()}>Register</button>
+					<input className = {styles.input} type="password" placeholder="Password" id="signUpPassword" onChange={(e) => setSignUpPassword(e.target.value)} value={signUpPassword} />
+					<button className = {styles.register} onClick={() => handleRegister()}><SignUp/></button>
 				</div>
 			</div>
 		);
@@ -65,13 +69,15 @@ let modalSignUpContent = (
 
   let modalSignInContent = (
     <div className={styles.registerContainer}>
-      <div class="croix"></div>
+      <div className= {styles.closeIcon}>
+      <FontAwesomeIcon onClick={showSignInModal} className={styles.userSection} icon={faXmark} />
+      </div>
       <img class = "logo"></img>
       <div className={styles.registerSection}>
-        <p>Sign-in to your Hackatweet account</p>
+        <p className = {styles.sectionTitle}>Sign-in to your Hackatweet account</p>
         <input className = {styles.input} type="text" placeholder="Username" id="signInUsername" onChange={(e) => setSignInUsername(e.target.value)} value={signInUsername} />
         <input className = {styles.input} type="password" placeholder="Password" id="signInPassword" onChange={(e) => setSignInPassword(e.target.value)} value={signInPassword} />
-        <div className = {styles.inputButton} id="connection" onClick={() => handleConnection()}><SignUp/></div>
+        <div className = {styles.inputButton} id="connection" onClick={() => handleConnection()}><SignIn/></div>
       </div>
     </div>
   );
@@ -126,7 +132,7 @@ let modalSignUpContent = (
 			</div>}
       {isSignUpModalVisible && <div id="react-modals">
 				<Modal getContainer="#react-modals" className={styles.modal} visible={isSignUpModalVisible} closable={false} footer={null}>
-					{modalSignInContent}
+					{modalSignUpContent}
 				</Modal>
 			</div>}
     </div>
