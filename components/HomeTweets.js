@@ -1,13 +1,21 @@
 import styles from '../styles/HomeTweets.module.css';
-import Tweet from './Tweet';
-
+import LeftContainer from './LeftContainer';
 
 function HomeTweets() {
 
     return(
-        <div>
-            <Tweet></Tweet>
+
+        <div className={styles.body}>
+        <div className={styles.left}>
+            <LeftContainer></LeftContainer>
         </div>
+
+        <div className={styles.center}></div>
+
+        <div className={styles.right}></div>
+
+        </div>
+
     )
 }
 

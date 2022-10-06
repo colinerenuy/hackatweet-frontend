@@ -1,0 +1,19 @@
+.body {
+    display: grid;
+    grid-template-columns: 20vw, 50vw, 30vw;
+}
+
+.left {
+    grid-column-start: 1;
+    grid-column-end: 2;
+}
+
+.center {
+    grid-column-start: 2;
+    grid-column-end: 3;
+}
+
+.right {
+    grid-column-start: 3;
+    grid-column-end: 4;
+}
