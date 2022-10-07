@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHeart, faTrash} from '@fortawesome/free-solid-svg-icons';
 
 function Tweet(props) {
-
+    
     return(
         <div className = {styles.tweetBody}>
             <div className = {styles.userInfos}>

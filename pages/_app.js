@@ -11,9 +11,9 @@ import { combineReducers, configureStore } from '@reduxjs/toolkit';
 
 //reducers//
 import user from '../reducers/user';
-import tweets from '../reducers/tweets';
+import likes from '../reducers/likes';
 import hashtags from '../reducers/hashtags';
-const reducers = combineReducers({ user, tweets, hashtags });
+const reducers = combineReducers({ user, likes, hashtags });
 
 //création du store persistant
 const persistConfig = { key: 'hackatweets', storage };
