@@ -13,7 +13,7 @@ function Tweet(props) {
                     <p className = {styles.firstname}>John{props.firstname}<span className = {styles.username}> @JohnCena{props.username} • 5 hours {props.time} </span></p>
                 </div>
             </div>
-            <p className = {styles.tweet}>Hello everyone!</p>
+            <p className = {styles.tweet}>Hello everyone! {props.message}</p>
             <div className = {styles.icons}>
                 <div className = {styles.heart}>
                 <FontAwesomeIcon className = {styles.icon} icon={faHeart} />

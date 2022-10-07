@@ -13,8 +13,8 @@ import { faXmark} from '@fortawesome/free-solid-svg-icons';
 
 function Home() {
   const dispatch = useDispatch();
-  const [isSignInModalVisible, setSignInIsModalVisible] = useState(false);
-  const [isSignUpModalVisible, setSignUpIsModalVisible] = useState(false);
+  const [isSignInModalVisible, setSignInIsModalVisible] = useState(false); //corresponde au bouton, déclenche la croix
+  const [isSignUpModalVisible, setSignUpIsModalVisible] = useState(false); //
 	const [signUpUsername, setSignUpUsername] = useState('');
 	const [signUpPassword, setSignUpPassword] = useState('');
   const [signUpFirstname, setsignUpFirstname] = useState('');
