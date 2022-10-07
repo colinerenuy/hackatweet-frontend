@@ -1,9 +1,12 @@
 .body {
     display: grid;
-    grid-template-columns: 20vw, 50vw, 30vw;
+    grid-template-columns: 25vw, 50vw, 25vw;
+    background-color: #0a141c;
+    width: 100vw;
 }
 
 .left {
+    width: 25vw;
     grid-column-start: 1;
     grid-column-end: 2;
 }
@@ -11,9 +14,13 @@
 .center {
     grid-column-start: 2;
     grid-column-end: 3;
+    border-right: 1px solid grey;
+    border-left: 1Px solid grey;
+    width:  50vw;
 }
 
 .right {
+    width: 25vw;
     grid-column-start: 3;
     grid-column-end: 4;
 }

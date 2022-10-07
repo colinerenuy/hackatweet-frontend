@@ -1,68 +1,72 @@
-.Logotwitter {
-  margin-top: 20px;
-  margin-left: 30px;
-  width: 50px;
-  height: 50px;
-}
 
-.LogoUser {
-    display: flex;
-    flex-direction: row;
-  border-radius: 50%;
-  height: 50px;
-  width: 50px;
-  margin-top: 60px;
-  justify-content: flex-start;
-}
-
-.Logout {
-  display: flex;
-  justify-content: space-between;
-  background-color: #0a141c;
-  color: white;
-  width: 70px;
-  border-radius: 20px;
-  border: 1.5px solid white;
-  margin-left: 60px;
-  margin-bottom: 40px;
-  font-size: smaller;
-}
 
 .leftContainer {
+  padding: 20px;
+  padding-left: 30px;
+  width: 100%;
   display: flex;
   flex-direction: column;
   height: 100vh;
-  width:30vw;
   justify-content: space-between;
-  background-color: red;
 }
 
-.Testname {
-  color: white;
-  font-size: 20px;
-  font-weight: bolder;
-  margin-left: 100px;
+.Logotwitter {
+  width: 50px;
+  height: 50px;
 }
 
-.Testusername {
-  color: rgb(86, 82, 82);
-  font-size: 15px;
-  margin-left: 100px;
-  margin-top: 10px;
-  margin-bottom: 20px;
-}
-
+/* UserInfos */
 .container {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  align-items: center;
+  justify-content: left;
 }
 
-.Names {
+.name {
+  color: white;
+  font-size: 15px;
+  font-weight: bolder;
+  margin-bottom: 5px;
+}
+
+.username {
+  color: grey;
+  font-size: 15px;
+}
+
+.LogoUser {
+  border-radius: 50%;
+  height: 50px;
+  width: 50px;
+}
+
+.namesContainer {
     display: flex;
     flex-direction: column;
+    margin-left: 10px;
 }
 
 .bottomContainer {
-    display: flex;
+  display: flex;
    flex-direction: column;
+}
+
+/* BUTTON BOTTOM */
+
+.buttonContainer{
+width: 100%;
+display: flex;
+justify-content: left;
+align-items: bottom;
+}
+
+.Logout {
+  background-color: transparent;
+  font-weight: bold;
+  color: white;
+  width: 80px;
+  height: 25px;
+  border-radius: 20px;
+  border: 1.5px solid white;
+  margin-top: 30px;
 }

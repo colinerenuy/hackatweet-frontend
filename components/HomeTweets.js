@@ -1,5 +1,9 @@
 import styles from '../styles/HomeTweets.module.css';
 import LeftContainer from './LeftContainer';
+import Header from './Header';
+import Tweet from './Tweet';
+import Hashtag from './Hashtag';
+
 
 function HomeTweets() {
 
@@ -10,9 +14,13 @@ function HomeTweets() {
             <LeftContainer></LeftContainer>
         </div>
 
-        <div className={styles.center}></div>
-
-        <div className={styles.right}></div>
+        <div className={styles.center}>
+        <div className = {styles.header}><Header/></div>
+        <div className = {styles.tweetContainer}><Tweet/></div>
+        </div>
+        
+        <div className={styles.right}>
+            <Hashtag/></div>
 
         </div>
 

@@ -17,12 +17,14 @@ function LeftContainer() {
         <div className={styles.bottomContainer}>
           <div className={styles.container}>
             <img className={styles.LogoUser} src="/twitter-avatar.jpg"></img>
-            <div className={styles.Names}>
-              <span className={styles.Testname}>Testname</span>
-              <span className={styles.Testusername}>@Testusername</span>
+            <div className={styles.namesContainer}>
+              <span className={styles.name}>Testname</span>
+              <span className={styles.username}>@Testusername</span>
             </div>
           </div>
+          <div className = {styles.buttonContainer}>
           <button className={styles.Logout}>Logout</button>
+          </div>
         </div>
         </div>
       

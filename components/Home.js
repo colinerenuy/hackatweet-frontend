@@ -27,7 +27,6 @@ function Home() {
 	};
 
   const showSignUpModal = () => {
-    console.log("click SignUp");
 		setSignUpIsModalVisible(!isSignUpModalVisible);
     console.log(isSignUpModalVisible);
 	};

@@ -15,7 +15,10 @@ function Tweet(props) {
             </div>
             <p className = {styles.tweet}>Hello everyone!</p>
             <div className = {styles.icons}>
-            <FontAwesomeIcon className = {styles.icon} icon={faHeart} />
+                <div className = {styles.heart}>
+                <FontAwesomeIcon className = {styles.icon} icon={faHeart} />
+                <span>0</span>
+                </div>
             <FontAwesomeIcon className = {styles.icon} icon={faTrash} />
             </div>
         </div>

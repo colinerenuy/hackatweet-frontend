@@ -1,5 +1,4 @@
 .tweetBody {
-    background-color: black;
     border-right: 1px solide grey;
     border-left: 1px solide grey;
     border-top: 1px solide grey;
@@ -18,6 +17,7 @@
 .userInfos{
     display: flex;
 }
+
 .textInfos {
     display: flex;
     margin: 5px;
@@ -33,14 +33,23 @@
 }
 
 .icons {
-    margin-top: 20px;
+    margin-top: 10px;
     display: flex;
+    width: 80px;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .icon {
-    padding-right: 10px;
+    margin-right: 10px;
 }
 
 .tweet {
     height: 20px;
+}
+
+.heart {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
