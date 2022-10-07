@@ -11,6 +11,7 @@ function LeftContainer() {
   //const dispatch = useDispatch();
   //const [isModalVisible, setIsModalVisible] = useState(false);
   const dispatch = useDispatch();
+  const userConnected = useSelector((state) => state.user.value);
 
   const loggingOut = () => {
     console.log("logging out")
@@ -26,8 +27,8 @@ function LeftContainer() {
           <div className={styles.container}>
             <img className={styles.LogoUser} src="/twitter-avatar.jpg"></img>
             <div className={styles.namesContainer}>
-              <span className={styles.name}>Testname</span>
-              <span className={styles.username}>@Testusername</span>
+              <span className={styles.name}>{userConnected.firstname}</span>
+              <span className={styles.username}>{userConnected.username}</span>
             </div>
           </div>
           <div className = {styles.buttonContainer}>
