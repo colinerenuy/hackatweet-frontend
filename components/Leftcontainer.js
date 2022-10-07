@@ -6,9 +6,17 @@ import Moment from "react-moment";
 import { Modal } from "antd";
 import Link from "next/link";
 
+
 function LeftContainer() {
   //const dispatch = useDispatch();
   //const [isModalVisible, setIsModalVisible] = useState(false);
+  const dispatch = useDispatch();
+
+  const loggingOut = () => {
+    console.log("logging out")
+    dispatch(logout())
+    window.location.href = "http://localhost:3001";
+  }
 
   return (
     
@@ -23,12 +31,10 @@ function LeftContainer() {
             </div>
           </div>
           <div className = {styles.buttonContainer}>
-          <button className={styles.Logout}>Logout</button>
+          <button onClick={() => loggingOut()} className={styles.Logout}>Logout</button>
           </div>
         </div>
         </div>
-      
-  
   );
 }
 

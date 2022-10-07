@@ -21,6 +21,12 @@ function Home() {
 	const [signInUsername, setSignInUsername] = useState('');
 	const [signInPassword, setSignInPassword] = useState('');
 
+  const userConnected = useSelector((state) => state.user.value);
+
+  if (userConnected.username != null) {
+    window.location.href = "http://localhost:3001/hometweets";
+  }
+  
   const showSignInModal = () => {
     console.log("click SignIn");
 		setSignInIsModalVisible(!isSignInModalVisible);
@@ -32,6 +38,7 @@ function Home() {
 	};
 
 ////////////////////////////////////////SIGNUP MODAL////
+
 //Contenu//
 let modalSignUpContent = (
 			<div className={styles.registerContainer}>
@@ -48,24 +55,26 @@ let modalSignUpContent = (
 				</div>
 			</div>
 		);
-  //////////Fonctions//////
-  // const handleRegister = () => {
-	// 	fetch('http://localhost:3000/users/signup', {
-	// 		method: 'POST',
-	// 		headers: { 'Content-Type': 'application/json' },
-	// 		body: JSON.stringify({ username: signUpUsername, password: signUpPassword, firstname: signUpFirstname}),
-	// 	}).then(response => response.json())
-	// 		.then(data => {
-	// 			if (data.result) {
-	// 				dispatch(login({ username: signUpUsername, token: data.token }));
-	// 				setSignUpUsername('');
-	// 				setSignUpPassword('');
-	// 				setIsModalVisible(false)
-	// 			}
-	// 		});
-	// };
 
-  ////////////////////////////////////////SIGNIN MODAL////
+  //////////Fonctions//////
+  const handleRegister = () => {
+		fetch('http://localhost:3000/users/signup', {
+			method: 'POST',
+			headers: { 'Content-Type': 'application/json' },
+			body: JSON.stringify({ username: signUpUsername, password: signUpPassword, firstname: signUpFirstname}),
+		}).then(response => response.json())
+			.then(data => {
+				if (data.result) {
+          console.log(data);
+					dispatch(login({ username: signUpUsername, token: data.token, firstname: signUpFirstname }));
+					setSignUpUsername('');
+					setSignUpPassword('');
+					setSignUpIsModalVisible(false)
+				}
+			});
+	};
+
+  ////////////////////////////////////////SIGNIN MODAL////////////
 
   let modalSignInContent = (
     <div className={styles.registerContainer}>
@@ -82,22 +91,22 @@ let modalSignUpContent = (
     </div>
   );
 
-  // const handleConnection = () => {
+  const handleConnection = () => {
 
-	// 	fetch('http://localhost:3000/users/signin', {
-	// 		method: 'POST',
-	// 		headers: { 'Content-Type': 'application/json' },
-	// 		body: JSON.stringify({ username: signInUsername, password: signInPassword }),
-	// 	}).then(response => response.json())
-	// 		.then(data => {
-	// 			if (data.result) {
-	// 				dispatch(login({ username: signInUsername, token: data.token }));
-	// 				setSignInUsername('');
-	// 				setSignInPassword('');
-	// 				setIsModalVisible(false)
-	// 			}
-	// 		});
-	// };
+		fetch('http://localhost:3000/users/signin', {
+			method: 'POST',
+			headers: { 'Content-Type': 'application/json' },
+			body: JSON.stringify({ username: signInUsername, password: signInPassword }),
+		}).then(response => response.json())
+			.then(data => {
+				if (data.result) {
+					dispatch(login({ username: signInUsername, token: data.token, firstname: data.firstname }));
+					setSignInUsername('');
+					setSignInPassword('');
+					setSignInIsModalVisible(false)
+				}
+			});
+	};
 
 	////RETURN/////
 
@@ -105,14 +114,6 @@ let modalSignUpContent = (
     <div>
     <div className = {styles.body}>
       <div className = {styles.leftContainer} >
-
-
-
-
-
-
-
-
       </div>
       <div className = {styles.rightContainer}>
         <img className = {styles.logoTwitter} src="/twitter-icon-black.png"></img>
